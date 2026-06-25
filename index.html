@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <section class="conteudo">
 
-        <div class="conteudo-titulo">
-            <h2 class="titulo-principal">Gerador de Senhas</h2>
-            <h3 class="titulo-secundario">
-                Gere instantaneamente uma senha aleatória e segura
-            </h3>
-        </div>
+        <h1>Gerador de Senhas</h1>
 
         <div class="conteudo-senha">
             <label for="campo-senha">Senha</label>
@@ -24,35 +18,19 @@
         </div>
 
         <div class="parametro">
-            <h3 class="parametro-titulo">Personalize sua senha</h3>
+            <h2>Número de caracteres</h2>
 
-            <div class="parametro-coluna__senha">
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">
-                        Número de caracteres
-                    </h4>
+            <div class="parametro-senha-botoes">
+                <button id="diminuir">-</button>
 
-                    <div class="parametro-senha-botoes">
-                        <button class="parametro-senha__botao" id="diminuir">
-                            -
-                        </button>
+                <p id="valor-senha">12</p>
 
-                        <p class="parametro-senha__texto" id="valor-senha">
-                            12
-                        </p>
-
-                        <button class="parametro-senha__botao" id="aumentar">
-                            +
-                        </button>
-                    </div>
-                </div>
+                <button id="aumentar">+</button>
             </div>
-
         </div>
 
     </section>
 
     <script src="script.js"></script>
 </body>
-
 </html>
