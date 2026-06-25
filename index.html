@@ -11,37 +11,30 @@
 
 <body>
 
-    <section class="conteudo">
+    <div class="card">
 
-        <div class="conteudo-titulo">
-            <h1 class="titulo-principal">Gerador de Senhas</h1>
-            <h2 class="titulo-secundario">
-                Gere uma senha aleatória e segura
-            </h2>
+        <h1>🔐 Gerador de Senhas</h1>
+
+        <!-- IMAGEM (FUNCIONA SEM ARQUIVO LOCAL) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Lock.svg" alt="cadeado" class="img">
+
+        <div class="senha-box">
+            <input id="senha" type="text" readonly>
         </div>
 
-        <div class="conteudo-senha">
-            <label for="campo-senha">Senha gerada</label>
-            <input type="text" id="campo-senha" readonly>
-        </div>
+        <div class="controle">
 
-        <div class="parametro">
+            <button id="menos">-</button>
 
-            <h3 class="parametro-titulo">Número de caracteres</h3>
+            <span id="valor">12</span>
 
-            <div class="parametro-senha-botoes">
-
-                <button id="diminuir" class="parametro-senha__botao">-</button>
-
-                <p id="valor-senha" class="parametro-senha__texto">12</p>
-
-                <button id="aumentar" class="parametro-senha__botao">+</button>
-
-            </div>
+            <button id="mais">+</button>
 
         </div>
 
-    </section>
+        <button id="gerar">Gerar senha</button>
+
+    </div>
 
     <script src="script.js"></script>
 

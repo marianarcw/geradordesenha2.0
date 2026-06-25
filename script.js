@@ -1,39 +1,34 @@
-const diminuir = document.getElementById("diminuir");
-const aumentar = document.getElementById("aumentar");
-const valorSenha = document.getElementById("valor-senha");
-const campoSenha = document.getElementById("campo-senha");
+const menos = document.getElementById("menos");
+const mais = document.getElementById("mais");
+const valor = document.getElementById("valor");
+const senha = document.getElementById("senha");
+const gerar = document.getElementById("gerar");
 
-let quantidade = 12;
+let tamanho = 12;
 
 function gerarSenha(tamanho) {
-    const caracteres =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
-
-    let senha = "";
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
+    let resultado = "";
 
     for (let i = 0; i < tamanho; i++) {
-        const indice = Math.floor(Math.random() * caracteres.length);
-        senha += caracteres[indice];
+        resultado += chars[Math.floor(Math.random() * chars.length)];
     }
 
-    return senha;
+    return resultado;
 }
 
-function atualizarSenha() {
-    valorSenha.textContent = quantidade;
-    campoSenha.value = gerarSenha(quantidade);
-}
-
-diminuir.addEventListener("click", () => {
-    if (quantidade > 1) {
-        quantidade--;
-        atualizarSenha();
+menos.onclick = () => {
+    if (tamanho > 1) {
+        tamanho--;
+        valor.textContent = tamanho;
     }
-});
+};
 
-aumentar.addEventListener("click", () => {
-    quantidade++;
-    atualizarSenha();
-});
+mais.onclick = () => {
+    tamanho++;
+    valor.textContent = tamanho;
+};
 
-atualizarSenha();
+gerar.onclick = () => {
+    senha.value = gerarSenha(tamanho);
+};
